@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { Container, Button, AnimatedText } from "./MainScreen";
-import styled from "styled-components";
-import { ImgBox } from "./WebpackLoadersScreen";
 
 export default function ImageLoaderScreen() {
   return (
@@ -48,7 +46,7 @@ export default function ImageLoaderScreen() {
         </h2>
       </AnimatedText>
       <Link to={"/import"}>
-        <Button>Clique aqui para começar!</Button>
+        <Button>Clique aqui para continuar!</Button>
       </Link>
     </Container>
   );

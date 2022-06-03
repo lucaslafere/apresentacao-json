@@ -54,7 +54,7 @@ export default function CssStyleLoaderScreen() {
         <img src={print} alt="" />
       </ImgBox>
       <Link to={"/imageloader"}>
-        <Button>Clique aqui para começar!</Button>
+        <Button>Clique aqui para continuar!</Button>
       </Link>
     </Container>
   );
