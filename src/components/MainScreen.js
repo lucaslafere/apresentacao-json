@@ -9,7 +9,7 @@ export default function MainScreen() {
         Cá estamos com um pequeno site pra pesquisa sobre Webpack Asset
         Management :)
       </h1>
-      <Link to={"webpackloaders"}>
+      <Link to={"/webpackloaders"}>
         <Button>Clique aqui para começar!</Button>
       </Link>
     </Container>
@@ -30,13 +30,20 @@ const Container = styled.div`
     font-weight: 400;
     font-size: 1.5rem;
   }
+`
+const AnimatedText = styled.div`
+    width: 50%;
   h2 {
     font-family: "Recursive", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
-    animation: animate 2s ease-in-out;
+    animation: animate 2s ease-in-out forwards;
+  
   }
+  h2:before {
+    content:"•";
+}
   @keyframes animate {
         0% {
             width: 0px;
@@ -50,12 +57,17 @@ const Container = styled.div`
             width: 50px;
             height: 80px;
         }
+        100% {
+          width: 50px;
+          height: 80px;
+        }
     }
 `;
 export { Container };
+export { AnimatedText }
+
 const Button = styled.button`
   width: 100%;
-  height: 40px;
   border-radius: 20px;
   border: none;
   font-family: "Recursive", sans-serif;
@@ -65,6 +77,9 @@ const Button = styled.button`
   font-style: normal;
   font-weight: 400;
   font-size: 0.9rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 `;
 export { Button };
