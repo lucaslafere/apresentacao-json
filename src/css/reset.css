@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&family=Righteous&display=swap');
+
 html,
 body,
 div,
@@ -129,13 +130,13 @@ strong {
 * {
   box-sizing: border-box;
   text-decoration: none;
-  transition: all ease 0.4s;
-  font-family: "Lexend Deca", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  transition: all ease 0.2s;
 }
 
 body {
   margin: 0 auto;
   min-height: 100vh;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
 }
