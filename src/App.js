@@ -6,6 +6,7 @@ import ImageLoaderScreen from "./components/ImageLoaderScreen";
 import ImportCssImagesScreen from "./components/ImportCssImagesScreen";
 import RandomHashScreen from "./components/RandomHashScreen";
 import EndScreen from "./components/EndScreen";
+import NewEndScreen from "./components/NewEndScreen";
 
 // Pls add wooosh sound to clicks on button
 
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/import" element={<ImportCssImagesScreen />} />
         <Route path="/randomhash" element={<RandomHashScreen />} />
         <Route path="/end" element={<EndScreen />} />
+        <Route path="/newend" element={<NewEndScreen />} />
       </Routes>
     </BrowserRouter>
   );

@@ -22,6 +22,12 @@ export default function ImageLoaderScreen() {
           JSON.parse() desserializa uma string para objeto, portanto, transformando a string objeto JSON para Objeto JS
         </h2>
       </AnimatedText>
+      <AnimatedText>
+        <h2>
+        <a href="https://codesandbox.io/s/dazzling-silence-xvyf7c?file=/src/App.js" target={"_blank"}>
+          Vamos ao codesandbox ver isso na prática: </a>
+        </h2>
+      </AnimatedText>
       <Link to={"/import"}>
         <Button>Clique aqui para continuar!</Button>
       </Link>

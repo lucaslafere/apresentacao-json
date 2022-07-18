@@ -1,91 +1,43 @@
 import { Link } from "react-router-dom";
 import { Container, Button, AnimatedText } from "./MainScreen";
-import { ImgBox } from "./WebpackLoadersScreen";
 
 export default function RandomHashScreen() {
     return (
         <Container>
             <h1>
-                Por que as imagens processadas pelo Image Loader contém um hash
-                aleatório no nome?
+                - O que é XML? Como serializamos um objeto JS em XML?
             </h1>
             <AnimatedText>
-                <h2>Chegou a hora da nerdice, vamos lá</h2>
+                <h2>XML = eXtensible Markup Language (parecido com HTML), guarda dados para serem transportados</h2>
             </AnimatedText>
             <AnimatedText>
                 <h2>
-                    Quando o webpack faz seu bundle (build), ele prepara e otimiza nossos
-                    arquivos para serem lidos pelo navegador
+                    XML "nao faz nada", é apenas informaçao dentro de tags parecidas com html
+                </h2>
+            </AnimatedText>
+            <AnimatedText>
+                <h2><a href="https://codesandbox.io/s/pedantic-rosalind-r5d8uf?file=/src/index.js" target={"_blank"}>
+                    Um exemplo de formato XML pode ser visto aqui:</a>
                 </h2>
             </AnimatedText>
             <AnimatedText>
                 <h2>
-                    No primeiro acesso ao site, o navegador guarda esses arquivos em <strong>cache</strong>, que é como uma memória
+                XML guarda dados, HTML mostra dados
+                </h2>
+            </AnimatedText>
+            <AnimatedText>
+                <h2><a href="https://codesandbox.io/s/nervous-cohen-6j2vo9?file=/src/index.js" target={"_blank"}>
+                    Para serializar um Objeto JS em XML, seria possível com o seguinte código, visto no codesandbox
+                    </a>
                 </h2>
             </AnimatedText>
             <AnimatedText>
                 <h2>
-                    O navegador faz isso para otimizar o carregamento da página, evitando
-                    recarregar arquivos que ele já conhece
+                Mas sinceramente? É mais simples usar uma lib xml-to-json, pode dar um stringify no objeto JS para JSON, e depois utilizar a lib
                 </h2>
             </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Ok, ótimo, mas há um problema nisso: é possível que existam mudanças
-                    nesses arquivos <strong>não-lidas</strong> pelo navegador.
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Caso ele verifique no cache um arquivo com o mesmo nome
-                    do arquivo "modificado", ele pode escolher não atualizá-lo
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Isso acontece porque, como ambos têm o mesmo nome, ele poupa o usuário de baixar novamente os arquivos
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Ou seja, mesmo atualizando seu site, usuários com certos navegadores podem <strong>não</strong> receber essa atualização
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Para solucionar isso, o Image-Loader (assim como os outros loaders vistos aqui), alteram os nomes dos arquivos
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Sendo assim, os arquivos sempre terão um <strong>novo nome</strong> após uma atualização, e portanto o cache será atualizado
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Isso acontece transformando o nome do arquivo, dado por você, em um <strong>hash aleatório</strong>, garantindo um nome único
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Esse processo acontece durante o <strong>build</strong> (quando rodamos o webpack, com npx webpack), e <strong>não</strong> está restrito à imagens
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    O mesmo acontece com nossos arquivos css (com css-loader) ou js (com o babel)
-                </h2>
-            </AnimatedText>
-            <AnimatedText>
-                <h2>
-                    Um exemplo de Data URL, um hash aleatório em base64:
-                </h2>
-            </AnimatedText>
-            <ImgBox>
-                <img src="https://i.stack.imgur.com/8kCkH.png" alt="" />
-            </ImgBox>
             <Link to={"/end"}>
-                <Button>Clique aqui para continuar! (finalmente né...)</Button>
+                <Button>Clique aqui para continuar!</Button>
             </Link>
         </Container>
     );

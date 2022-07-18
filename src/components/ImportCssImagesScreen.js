@@ -4,33 +4,37 @@ import { Container, Button, AnimatedText } from "./MainScreen";
 export default function ImportCssImagesScreen() {
   return (
     <Container>
-      <h1>Como importar CSS e Imagens dentro dos seus arquivos JS?</h1>
+      <h1>- O que acontece quando serializamos objetos que tenham uma função dentro? Por quê?</h1>
       <AnimatedText>
         <h2>
-          Como já foi explicado anteriormente para facilitar o entendimento,
-          farei apenas um resumo:
+          Nenhuma função é serializável para JSON. JSON não suporta uma "function" como tipo de dado.
         </h2>
       </AnimatedText>
       <AnimatedText>
         <h2>
-          Instalar os loaders desejados via npm (css-loader, style-loader,
-          img-loader, file-loader)
+          Ele aceita strings, numeros, objetos, arrays, true, false, null. Mas não uma funçao.
         </h2>
       </AnimatedText>
       <AnimatedText>
         <h2>
-          Adicioná-los à seção "module" do seu webpack.config, conforme
-          documentação
+          Aí vem a pergunta: e se eu fizer um .toString() na function? Ai ele serializa, mas na hora de
+          desserializar, ela não vai virar uma função de volta.
         </h2>
       </AnimatedText>
       <AnimatedText>
         <h2>
-          Utilizar os loaders nos seus arquivos javascript, via import img from
-          './file.png'; e import './style.css';
+          Além disso, o ambiente e o contexto de variáveis e estados numa função seriam desconhecidos para o JSON
+          e para o novo ambiente após serializar e desserializar.
+        </h2>
+      </AnimatedText>
+      <AnimatedText>
+        <h2><a href="https://codesandbox.io/s/inspiring-buck-wyftvb?file=/src/index.js" target={"_blank"}>
+        Vejamos um exemplo no codesandbox novamente, clicando aqui
+        </a>
         </h2>
       </AnimatedText>
       <Link to={"/randomhash"}>
-        <Button>Clique aqui para continuar! (o próximo demora viu...)</Button>
+        <Button>Clique aqui para continuar! (o próximo é complicadinho, viu?!... kkk)</Button>
       </Link>
     </Container>
   );
