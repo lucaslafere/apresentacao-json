@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Container, Button, AnimatedText } from "./MainScreen";
-import styled from "styled-components";
 
 export default function WebpackLoadersScreen() {
   return (
@@ -31,21 +30,3 @@ export default function WebpackLoadersScreen() {
   );
 }
 
-const ImgBox = styled.div`
-  width: 600px;
-  height: 400px;
-  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #c2e9fb;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-  }
-`;
-export { ImgBox };
