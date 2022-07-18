@@ -7,12 +7,11 @@ export default function MainScreen() {
       <h1>Oi gente! Eu odeio fazer slides em PowerPoint etc, então...</h1>
       <AnimatedText>
         <h2>
-          Cá estamos com um pequeno site pra pesquisa sobre Webpack Asset
-          Management :)
+          Cá estamos com um pequeno site pra pesquisa sobre JSON e serialização :)
         </h2>
       </AnimatedText>
       <AnimatedText>
-        <h2>Ps: Não deu tempo de aprender scrollIntoView no React :(</h2>
+        <h2>Ps: Não deu tempo de aprender scrollIntoView no React de novo (é com useRef) :(</h2>
       </AnimatedText>
       <AnimatedText>
         <h2>Então vamos scrollar manualmente mesmo</h2>

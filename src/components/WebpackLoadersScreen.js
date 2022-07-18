@@ -1,41 +1,29 @@
 import { Link } from "react-router-dom";
 import { Container, Button, AnimatedText } from "./MainScreen";
 import styled from "styled-components";
-import print from "../assets/babel-loader.jpeg";
 
 export default function WebpackLoadersScreen() {
   return (
     <Container>
-      <h1>O que são Loaders do Webpack?</h1>
+      <h1>- O que é serialização e deserialização? Quando precisamos usar essa técnica?</h1>
       <AnimatedText>
-        <h2>Resumidamente, loaders são como plugins do Webpack</h2>
+        <h2>Resumidamente, JSON codifica objetos em uma string, porque dados precisam ser byte strings</h2>
       </AnimatedText>
       <AnimatedText>
         <h2>
-          Podemos pensar que é parecido com o uso de libs, instaladas pelo npm
+        Serializar = converter um objeto nessa string
         </h2>
       </AnimatedText>
       <AnimatedText>
         <h2>
-          Ou seja, ao rodar o comando npm i babel-loader, por exemplo, estamos
-          deixando o plugin à nossa disposição
+        Objeto: {'{foo: [1, 4, 7, 10], bar: "baz"}'}
         </h2>
       </AnimatedText>
       <AnimatedText>
         <h2>
-          Depois, basta configurar o plugin instalado (babel-loader) dentro do
-          nosso arquivo "webpack.config.js"
+        Serializar para JSON string = '{'{"foo": [1,4,7,10], "bar":"baz"}'}'
         </h2>
       </AnimatedText>
-      <AnimatedText>
-        <h2>
-          Acessando o arquivo, devemos adicionar um module com algumas
-          configurações, segundo documentação:
-        </h2>
-      </AnimatedText>
-      <ImgBox>
-        <img src={print} alt="" />
-      </ImgBox>
       <Link to={"/cssstyleloader"}>
         <Button>Clique aqui para continuar!</Button>
       </Link>
